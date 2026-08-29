@@ -1,0 +1,230 @@
+/* The Sims 2 Setup Guide — hand-rolled stylesheet */
+:root {
+  --bg: #0e1420;
+  --bg-raised: #16202f;
+  --bg-sunken: #0a0f18;
+  --text: #dce6f2;
+  --text-dim: #8fa1b8;
+  --accent: #58d858;         /* plumbob green */
+  --accent-dim: #2e7d3a;
+  --link: #6cc4ff;
+  --border: #24344a;
+  --uc: #6cc4ff;             /* Ultimate Collection blue */
+  --legacy: #ffb454;         /* Legacy Collection amber */
+  --disc: #c0a8f0;           /* Discs/retail violet */
+  --warn: #ff7a6c;
+  --radius: 10px;
+  --sidebar-w: 260px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f7fb;
+    --bg-raised: #ffffff;
+    --bg-sunken: #e8edf4;
+    --text: #1c2836;
+    --text-dim: #5b6b7e;
+    --accent: #2c9e3f;
+    --accent-dim: #b9e3c1;
+    --link: #0b6fc2;
+    --border: #d5dfeb;
+    --uc: #0b6fc2;
+    --legacy: #b26a00;
+    --disc: #6b46a8;
+    --warn: #c0392b;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.layout { display: flex; min-height: 100vh; }
+
+/* ---- Sidebar ---- */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--bg-sunken);
+  border-right: 1px solid var(--border);
+  padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 0 1.25rem .9rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  border-bottom: 1px solid var(--border);
+}
+.brand em { color: var(--accent); font-style: normal; }
+.plumbob { color: var(--accent); font-size: 1.6rem; transform: scaleY(1.4); display: inline-block; }
+.sidebar nav { flex: 1; padding-top: .75rem; }
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+.sidebar li a {
+  display: flex;
+  align-items: baseline;
+  gap: .55rem;
+  padding: .45rem 1.25rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: .95rem;
+  border-left: 3px solid transparent;
+}
+.sidebar li a:hover { color: var(--text); background: var(--bg-raised); }
+.sidebar li a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background: var(--bg-raised);
+  font-weight: 600;
+}
+.nav-num {
+  font-size: .75rem;
+  color: var(--text-dim);
+  min-width: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
+.sidebar-footer {
+  padding: .9rem 1.25rem 0;
+  border-top: 1px solid var(--border);
+  font-size: .8rem;
+  color: var(--text-dim);
+}
+.sidebar-footer p { margin: .3rem 0; }
+
+/* ---- Content ---- */
+.content {
+  flex: 1;
+  min-width: 0;
+  max-width: 54rem;
+  padding: 2.5rem 3rem 5rem;
+}
+h1 { font-size: 2rem; margin: 0 0 1rem; line-height: 1.2; }
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2.2rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--border);
+}
+h3 { font-size: 1.1rem; margin-top: 1.6rem; }
+a { color: var(--link); }
+.anchor {
+  float: left;
+  margin-left: -1.1em;
+  width: 1.1em;
+  opacity: 0;
+  text-decoration: none;
+  color: var(--accent);
+}
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor { opacity: 1; }
+code {
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .1em .35em;
+  font-size: .88em;
+  font-family: Consolas, "Cascadia Mono", monospace;
+}
+pre {
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .9rem 1.1rem;
+  overflow-x: auto;
+}
+pre code { background: none; border: none; padding: 0; }
+img { max-width: 100%; border-radius: var(--radius); }
+table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--border); padding: .45rem .7rem; text-align: left; }
+th { background: var(--bg-sunken); }
+hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+blockquote {
+  margin: 1rem 0;
+  padding: .1rem 1.1rem;
+  border-left: 3px solid var(--text-dim);
+  background: var(--bg-raised);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--text-dim);
+}
+
+/* ---- Track blocks (UC / Legacy) ---- */
+.track {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .4rem 1.2rem .8rem;
+  margin: 1.2rem 0;
+  background: var(--bg-raised);
+}
+.track-label {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: .15rem .6rem;
+  border-radius: 999px;
+  margin: .5rem 0 .2rem;
+}
+.track-uc { border-left: 4px solid var(--uc); }
+.track-uc .track-label { background: color-mix(in srgb, var(--uc) 18%, transparent); color: var(--uc); }
+.track-legacy { border-left: 4px solid var(--legacy); }
+.track-legacy .track-label { background: color-mix(in srgb, var(--legacy) 18%, transparent); color: var(--legacy); }
+.track-disc { border-left: 4px solid var(--disc); }
+.track-disc .track-label { background: color-mix(in srgb, var(--disc) 18%, transparent); color: var(--disc); }
+
+/* ---- Callouts ---- */
+.callout {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .4rem 1.2rem;
+  margin: 1.2rem 0;
+  background: var(--bg-raised);
+}
+.callout-note { border-left: 4px solid var(--link); }
+.callout-tip { border-left: 4px solid var(--accent); }
+.callout-warn { border-left: 4px solid var(--warn); }
+
+/* ---- Mobile ---- */
+.nav-toggle {
+  display: none;
+  position: fixed;
+  top: .9rem;
+  right: .9rem;
+  z-index: 20;
+  background: var(--bg-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding: .35rem .6rem;
+  cursor: pointer;
+}
+@media (max-width: 860px) {
+  .layout { flex-direction: column; }
+  .sidebar {
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform .2s ease;
+    width: min(80vw, var(--sidebar-w));
+  }
+  .sidebar.open { transform: none; box-shadow: 0 0 40px rgba(0,0,0,.5); }
+  .nav-toggle { display: block; }
+  .content { padding: 1.5rem 1.25rem 4rem; }
+}

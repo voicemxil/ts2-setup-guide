@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{titletag}}</title>
+<meta name="description" content="Install and optimize The Sims 2 (Ultimate Collection & Legacy Collection) with essential fixes for modern Windows.">
+<link rel="stylesheet" href="{{root}}/style.css">
+<link rel="icon" href="{{root}}/static/favicon.png">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="{{root}}/">
+      <span class="plumbob">◆</span>
+      <span class="brand-text">The Sims 2<br><em>Setup Guide</em></span>
+    </a>
+    <nav>
+      <ul>
+{{nav}}
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <p>by <a href="https://www.tumblr.com/osab" rel="noopener">osab</a> · not affiliated with EA</p>
+      <p><a href="https://discord.gg/ts2community" rel="noopener">TS2 Community Discord</a></p>
+    </div>
+  </aside>
+  <main class="content">
+{{content}}
+  </main>
+</div>
+<button class="nav-toggle" aria-label="Menu">☰</button>
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', () =>
+  document.querySelector('.sidebar').classList.toggle('open'));
+</script>
+</body>
+</html>

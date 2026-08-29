@@ -1,0 +1,15 @@
+{
+  "name": "ts2-setup-guide",
+  "version": "1.0.0",
+  "description": "The Sims 2 Setup Guide by osab - modern setup for Ultimate Collection & Legacy Collection",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node build.mjs && npx serve dist"
+  },
+  "author": "osab",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^15.0.0"
+  }
+}
