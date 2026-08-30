@@ -25,6 +25,7 @@ One installer that detects your copy of the game and applies everything this gui
 - Installs the modern **Graphics Rules** configuration (see [Graphics Setup](../graphics/))
 - Installs **SpockTheWok's pink flash fix** ([TS2MemCapRemover](https://github.com/spockthewok/TS2MemCapRemover))
 - Installs essential fix packages: Sim Shadow Fix, Bright CAS Fix, Pie Menu Text Fix, CEP
+- Fixes an issue where some CAS items from the Happy Holiday Stuff Pack are missing
 - Optionally installs **DXVK** (recommended for AMD RX 400+ GPUs)
 - Installs required dependencies (Visual C++ x86 runtime, .NET)
 :::
