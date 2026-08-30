@@ -14,7 +14,7 @@ This guide covers **every version** of the game that exists today — the two co
 ## Which version do you have?
 
 ::: track Legacy
-**The Sims 2 Legacy Collection** — released January 2025, sold on **Steam** and the **EA App**. Base game + all expansions and stuff packs, updated by EA for modern systems. If you bought the game recently, this is what you have.
+**The Sims 2 Legacy Collection** — released January 2025, sold on **Steam** and the **EA App**. Base game + all expansions and stuff packs except **IKEA Home Stuff** (the Ultimate Collection includes it), updated by EA for modern systems. If you bought the game recently, this is what you have.
 :::
 
 ::: track UC

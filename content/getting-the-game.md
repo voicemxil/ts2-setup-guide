@@ -30,6 +30,14 @@ The 2014 Origin giveaway release. **Discontinued — it cannot be purchased.**
 After installing, continue to [Preparing Your PC](../preparing/).
 :::
 
+## Missing & extra content
+
+::: track Legacy
+**IKEA Home Stuff** couldn't be re-released, so the Legacy Collection doesn't include it. Community members have re-released its objects as ordinary Downloads-folder packages that restore the items and their catalog collection — HugeLunatic's version is the known one. The Setup Kit does not install game content, so this is a manual addition at your own discretion.
+:::
+
+**Sims 2 Store and pre-order/bonus content** (exclusive items once sold or bundled separately) isn't included in any edition. Community reuploads exist and install like regular custom content. As with all game content, the Setup Kit doesn't download it — adding it is up to you.
+
 ## Discs / retail
 
 Physical copies work fine on modern PCs but take more manual effort, and are only available secondhand. Complete [Shinki's disc installation guide](https://shinki26.tumblr.com/post/720014266106839040/the-sims-2-disc-installation-and-fix-guide-for) first, then return to this guide for graphics and fixes — the disc install registers itself the same way the Ultimate Collection does, so follow the **Ultimate Collection** steps.
